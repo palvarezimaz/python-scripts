@@ -1,6 +1,6 @@
 from pytube import YouTube
 
-def Download(link):
+def download(link):
   youtubeObject = YouTube(link)
   youtubeObject = youtubeObject.streams.get_highest_resolution()
   try:
@@ -10,4 +10,4 @@ def Download(link):
   print("Download is successful")
 
 link = input("Enter the YouTube video URL: ")
-Download(link)
+download(link)
